@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:color="@color/top_bar_side_disabled_color" android:state_enabled="false" />
+    <item android:color="@color/top_bar_side_enabled_color" android:state_enabled="true" />
+    <item android:color="@color/top_bar_side_enabled_color" />
+
+</selector>

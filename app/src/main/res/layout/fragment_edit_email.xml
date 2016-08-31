@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/et_email_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="email title"
+        android:maxLength="138"
+        android:padding="5dp"
+        android:textSize="16sp"/>
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="0.8dp"
+        android:contentDescription="@null"
+        android:src="@color/split_line"/>
+
+
+    <EditText
+        android:id="@+id/et_email_body"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="top"
+        android:hint="email body"
+        android:padding="5dp"
+        android:textSize="16sp"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+
+        <ImageView
+            android:id="@+id/iv_photos"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:src="@drawable/ic_back"/>
+
+        <TextView
+            android:id="@+id/tv_text_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="23/138"/>
+
+        <ImageView
+            android:id="@+id/iv_map_pin"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:src="@drawable/ic_back"/>
+    </RelativeLayout>
+
+</LinearLayout>
