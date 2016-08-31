@@ -26,7 +26,6 @@ public class RenYePage extends BaseFragment implements View.OnClickListener {
     @Override
     public View initView(LayoutInflater inflater) {
         view = inflater.inflate(R.layout.fragment_renye_jj, null);
-        ButterKnife.bind(this, view);
 
         mActivity = (RenYeActivity) getActivity();
         mActivity.setTitle("人业简介");
@@ -63,8 +62,6 @@ public class RenYePage extends BaseFragment implements View.OnClickListener {
 //                if (!isNext) {
 //                    T.showShort(mContext, getResources().getString(R.string.no_next_page));
 //                }
-                break;
-            case R.id.iv_photos:
                 break;
 
         }

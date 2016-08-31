@@ -12,7 +12,6 @@ import com.maple.quce.base.BaseFragment;
 import com.maple.quce.renye.RenYeActivity;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 
 /**
  * @author maple
@@ -26,7 +25,6 @@ public class HomePage extends BaseFragment implements View.OnClickListener {
     @Override
     public View initView(LayoutInflater inflater) {
         view = inflater.inflate(R.layout.fragment_home, null);
-        ButterKnife.bind(this, view);
 
         mActivity = (BaseActivity) getActivity();
         mActivity.isShowTopBar(false);
@@ -58,9 +56,7 @@ public class HomePage extends BaseFragment implements View.OnClickListener {
                 Intent intent = new Intent(mActivity, RenYeActivity.class);
                 startActivity(intent);
                 break;
-            case R.id.iv_photos:
 
-                break;
         }
     }
 
