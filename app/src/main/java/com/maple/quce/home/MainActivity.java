@@ -17,9 +17,9 @@ public class MainActivity extends BaseActivity {
     }
 
     private void initView() {
-
         addView(new HomePage());
     }
+
 
 
 }
