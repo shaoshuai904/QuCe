@@ -51,6 +51,7 @@ public class AnswerPage extends BaseFragment implements View.OnClickListener {
     public void initData(Bundle savedInstanceState) {
         index = 0;
         refreshAnswer();
+        checkIsOK();
     }
 
 
@@ -78,7 +79,6 @@ public class AnswerPage extends BaseFragment implements View.OnClickListener {
             }
         });
     }
-
 
     @Override
     public void onClick(View v) {

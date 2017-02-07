@@ -5,7 +5,7 @@ import android.os.Bundle;
 import com.maple.quce.R;
 import com.maple.quce.base.BaseActivity;
 import com.maple.quce.bean.TiMu;
-import com.maple.quce.renye.fragment.AnswerPage;
+import com.maple.quce.renye.fragment.RenYeIntroductionPage;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,7 +32,7 @@ public class RenYeActivity extends BaseActivity {
 
     private void initView() {
         // addView(new WebPage().setUrl(Const.REN_YE_URL));
-        addView(new AnswerPage());
+        addView(new RenYeIntroductionPage());
     }
 
 

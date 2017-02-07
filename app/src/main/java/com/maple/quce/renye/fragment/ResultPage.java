@@ -43,7 +43,6 @@ public class ResultPage extends BaseFragment implements View.OnClickListener {
         for (TiMu tm : tiku) {
             sb.append(tm.toString() + "\n");
         }
-
         tv_daan.setText(sb.toString());
     }
 
@@ -51,8 +50,6 @@ public class ResultPage extends BaseFragment implements View.OnClickListener {
     public void initListener() {
         mActivity.setLeftBtnClickListener(this);
         mActivity.setRightBtnClickListener(this);
-
-
     }
 
 
