@@ -29,7 +29,7 @@ public class StringUtils {
     }
 
     // 获取一个字符串开头的数字
-    public static String gerFirstNumber(String str) {
+    public static String getFirstNumber(String str) {
         for (int i = 0; i < str.length(); i++) {
             if (!Character.isDigit(str.charAt(i))) {
                 return str.substring(0, i);

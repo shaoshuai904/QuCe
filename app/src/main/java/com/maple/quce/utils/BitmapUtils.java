@@ -3,6 +3,8 @@ package com.maple.quce.utils;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.os.Build;
+import android.support.annotation.NonNull;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -18,6 +20,39 @@ import java.io.IOException;
  * @time 16/4/28 下午4:48
  */
 public class BitmapUtils {
+
+    /**
+     * 获取图片尺寸
+     *
+     * @param file File对象
+     * @return 尺寸数组. 0: width , 1: height
+     */
+    public static float[] getBitmapSize(@NonNull File file) {
+        float[] size = new float[2];
+        BitmapFactory.Options opts = new BitmapFactory.Options();
+        // 设置为true,decodeFile先不创建内存 只获取一些解码边界信息即图片大小信息
+        opts.inJustDecodeBounds = true;
+        BitmapFactory.decodeFile(file.getPath(), opts);
+        // 获取图片的原始宽度高度
+        size[0] = opts.outWidth;
+        size[1] = opts.outHeight;
+        return size;
+    }
+
+    /**
+     * 得到bitmap的大小
+     */
+    public static int getBitmapSize(@NonNull Bitmap bitmap) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) { //API 19
+            return bitmap.getAllocationByteCount();
+        }
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB_MR1) { //API 12
+            return bitmap.getByteCount();
+        }
+        // 在低版本中用一行的字节x高度
+        return bitmap.getRowBytes() * bitmap.getHeight(); //earlier version
+    }
+
 
     /**
      * 根据图像路径获取Bitmap
@@ -212,8 +247,7 @@ public class BitmapUtils {
      * @param needsDelete 压缩后是否删除原始文件
      * @throws IOException
      */
-    public static void compressAndGenImage(String imgPath, String outPath, int maxSize,
-                                           boolean needsDelete) throws IOException {
+    public static void compressAndGenImage(String imgPath, String outPath, int maxSize, boolean needsDelete) throws IOException {
         compressAndGenImage(getBitmap(imgPath), outPath, maxSize);
         // 删除原始文件
         if (needsDelete) {
