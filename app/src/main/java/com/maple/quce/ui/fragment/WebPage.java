@@ -1,6 +1,5 @@
 package com.maple.quce.ui.fragment;
 
-
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,7 +13,6 @@ import com.maple.quce.base.BaseFragment;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-
 
 /**
  * @author maple
